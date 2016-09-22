@@ -1,0 +1,40 @@
+{
+  "name": "electron-api-docs",
+  "version": "1.4.1",
+  "description": "Electron's API documentation in a structured JSON format",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js",
+    "release": "./release.sh",
+    "pretest": "npm run build",
+    "test": "mocha && standard && standard-markdown"
+  },
+  "repository": "https://github.com/electron/electron-api-docs",
+  "keywords": [
+    "electron",
+    "documentation",
+    "docs",
+    "json",
+    "reference",
+    "schema",
+    "offline"
+  ],
+  "author": "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gh-latest-release": "^1.0.0",
+    "json": "^9.0.4",
+    "mocha": "^3.0.2",
+    "standard": "^8.1.0",
+    "standard-markdown": "^1.2.1"
+  },
+  "dependencies": {
+    "keyed-array": "^2.1.0"
+  },
+  "standard": {
+    "env": {
+      "mocha": true
+    }
+  }
+}
