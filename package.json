@@ -6,7 +6,7 @@
   "scripts": {
     "build": "node build.js",
     "release": "./release.sh",
-    "test": "mocha && standard && standard-markdown"
+    "test": "node test.js | tap-spec && standard && standard-markdown"
   },
   "repository": "https://github.com/electron/electron-api-docs",
   "keywords": [
@@ -16,19 +16,20 @@
     "json",
     "reference",
     "schema",
-    "offline"
+    "offline",
+    "api"
   ],
   "author": "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)",
   "license": "MIT",
   "devDependencies": {
-    "chai": "^3.5.0",
     "gh-latest-release": "^1.0.0",
     "json": "^9.0.4",
-    "mocha": "^3.0.2",
     "nugget": "^2.0.1",
     "pify": "^2.3.0",
     "standard": "^8.1.0",
-    "standard-markdown": "^1.2.1"
+    "standard-markdown": "^1.2.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.0"
   },
   "dependencies": {
     "keyed-array": "^2.1.0"
