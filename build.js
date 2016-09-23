@@ -1,13 +1,11 @@
-#!/usr/bin/env node
-
 const path = require('path')
 const fs = require('fs')
 const packageJSON = require('./package.json')
 const latest = require('gh-latest-release')
 const pify = require('pify')
 const nugget = pify(require('nugget'))
-let version
-let url
+var version
+var url
 
 latest('electron/electron')
   .then(download)

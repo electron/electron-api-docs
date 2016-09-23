@@ -26,6 +26,8 @@
     "gh-latest-release": "^1.0.0",
     "json": "^9.0.4",
     "mocha": "^3.0.2",
+    "nugget": "^2.0.1",
+    "pify": "^2.3.0",
     "standard": "^8.1.0",
     "standard-markdown": "^1.2.1"
   },
