@@ -6,7 +6,6 @@
   "scripts": {
     "build": "node build.js",
     "release": "./release.sh",
-    "pretest": "npm run build",
     "test": "mocha && standard && standard-markdown"
   },
   "repository": "https://github.com/electron/electron-api-docs",
