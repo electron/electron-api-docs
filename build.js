@@ -22,6 +22,6 @@ function updatePackageJSON () {
 
   fs.writeFileSync(
     path.join(__dirname, 'package.json'),
-    JSON.stringify(packageJSON, null, 2)
+    JSON.stringify(packageJSON, null, 2) + '\n'
   )
 }
