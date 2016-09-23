@@ -1,4 +1,4 @@
-# electron-api-docs
+# electron-api-docs  [![Build Status](https://travis-ci.org/electron/electron-api-docs.svg?branch=master)](https://travis-ci.org/electron/electron-api-docs)
 
 Electron's API documentation in a structured JSON format.
 
