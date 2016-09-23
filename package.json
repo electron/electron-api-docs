@@ -36,5 +36,8 @@
     "env": {
       "mocha": true
     }
+  },
+  "engines": {
+    "node": "^6.6.0"
   }
 }
