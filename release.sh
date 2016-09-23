@@ -25,7 +25,7 @@ version=$(cat package.json | json version)
 git config user.email "zeke@sikelianos.com"
 git config user.name "Zeke Sikelianos"
 git commit -m "API docs for Electron $version"
-npm version $version -m "API docs for Electron $version"
+git tag -a "v$version" -m "API docs for Electron $version"
 npm publish
 git push origin master --follow-tags
 
