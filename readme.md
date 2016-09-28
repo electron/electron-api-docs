@@ -2,9 +2,6 @@
 
 Electron's API documentation in a structured JSON format.
 
-This package's versions are in sync with Electron. Whenever a new version of
-Electron is released, this package is published automatically.
-
 ## Installation
 
 ```sh
@@ -16,6 +13,10 @@ Or take it for a spin in your Node.js REPL:
 ```sh
 npm i -g trymodule && trymodule electron-api-docs=apis
 ```
+
+Note: This package is not semantically versioned. It is published in step with
+Electron. When you install `electron-api-docs@1.4.1`, you're getting the API
+docs from Electron v1.4.1.
 
 ## Usage
 
