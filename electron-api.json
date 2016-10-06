@@ -9,7 +9,7 @@
     "type": "Module",
     "slug": "clipboard",
     "websiteUrl": "http://electron.atom.io/docs/api/clipboard",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/clipboard.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/clipboard.md",
     "methods": [
       {
         "name": "readText",
@@ -309,7 +309,7 @@
     "type": "Module",
     "slug": "crash-reporter",
     "websiteUrl": "http://electron.atom.io/docs/api/crash-reporter",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/crash-reporter.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/crash-reporter.md",
     "methods": [
       {
         "name": "start",
@@ -395,7 +395,7 @@
     "type": "Module",
     "slug": "native-image",
     "websiteUrl": "http://electron.atom.io/docs/api/native-image",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/native-image.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/native-image.md",
     "methods": [
       {
         "name": "createEmpty",
@@ -461,7 +461,7 @@
     "type": "Class",
     "slug": "native-image",
     "websiteUrl": "http://electron.atom.io/docs/api/native-image",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/native-image.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/native-image.md",
     "instanceName": "image",
     "instanceMethods": [
       {
@@ -536,8 +536,19 @@
         "name": "getSize",
         "signature": "()",
         "returns": {
-          "type": "Integer[]",
-          "description": "The size of the image."
+          "type": "Object",
+          "properties": [
+            {
+              "name": "width",
+              "type": "Integer",
+              "description": ""
+            },
+            {
+              "name": "height",
+              "type": "Integer",
+              "description": ""
+            }
+          ]
         }
       },
       {
@@ -558,6 +569,83 @@
           "type": "Boolean",
           "description": "Whether the image is a template image."
         }
+      },
+      {
+        "name": "crop",
+        "signature": "(rect)",
+        "parameters": [
+          {
+            "name": "rect",
+            "type": "Object",
+            "description": "The area of the image to crop",
+            "properties": [
+              {
+                "name": "x",
+                "type": "Integer",
+                "description": ""
+              },
+              {
+                "name": "y",
+                "type": "Integer",
+                "description": ""
+              },
+              {
+                "name": "width",
+                "type": "Integer",
+                "description": ""
+              },
+              {
+                "name": "height",
+                "type": "Integer",
+                "description": ""
+              }
+            ]
+          }
+        ],
+        "returns": {
+          "type": "NativeImage",
+          "description": "The cropped image."
+        }
+      },
+      {
+        "name": "resize",
+        "signature": "(options)",
+        "description": "If only the height or the width are specified then the current aspect ratio will be preserved in the resized image.",
+        "parameters": [
+          {
+            "name": "options",
+            "type": "Object",
+            "properties": [
+              {
+                "name": "width",
+                "type": "Integer",
+                "description": "(optional)"
+              },
+              {
+                "name": "height",
+                "type": "Integer",
+                "description": "(optional)"
+              },
+              {
+                "name": "quality",
+                "type": "String",
+                "description": "(optional) - The desired quality of the resize image. Possible values are <code>good</code>, <code>better</code> or <code>best</code>. The default is <code>best</code>. These values express a desired quality/speed tradeoff. They are translated into an algorithm-specific method that depends on the capabilities (CPU, GPU) of the underlying platform. It is possible for all three methods to be mapped to the same algorithm on a given platform."
+              }
+            ]
+          }
+        ],
+        "returns": {
+          "type": "NativeImage",
+          "description": "The resized image."
+        }
+      },
+      {
+        "name": "getAspectRatio",
+        "signature": "()",
+        "returns": {
+          "type": "Float",
+          "description": "The image's aspect ratio."
+        }
       }
     ]
   },
@@ -571,7 +659,7 @@
     "type": "Module",
     "slug": "shell",
     "websiteUrl": "http://electron.atom.io/docs/api/shell",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/shell.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/shell.md",
     "methods": [
       {
         "name": "showItemInFolder",
@@ -799,7 +887,7 @@
     "type": "Module",
     "slug": "app",
     "websiteUrl": "http://electron.atom.io/docs/api/app",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/app.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/app.md",
     "methods": [
       {
         "name": "quit",
@@ -1881,7 +1969,7 @@
     "type": "Module",
     "slug": "auto-updater",
     "websiteUrl": "http://electron.atom.io/docs/api/auto-updater",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/auto-updater.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/auto-updater.md",
     "methods": [
       {
         "name": "setFeedURL",
@@ -1979,7 +2067,7 @@
     "type": "Class",
     "slug": "browser-window",
     "websiteUrl": "http://electron.atom.io/docs/api/browser-window",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/browser-window.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/browser-window.md",
     "staticMethods": [
       {
         "name": "getAllWindows",
@@ -3624,7 +3712,7 @@
     "type": "Module",
     "slug": "content-tracing",
     "websiteUrl": "http://electron.atom.io/docs/api/content-tracing",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/content-tracing.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/content-tracing.md",
     "methods": [
       {
         "name": "getCategories",
@@ -3779,7 +3867,7 @@
     "type": "Module",
     "slug": "dialog",
     "websiteUrl": "http://electron.atom.io/docs/api/dialog",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/dialog.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/dialog.md",
     "methods": [
       {
         "name": "showOpenDialog",
@@ -3968,7 +4056,7 @@
     "type": "Module",
     "slug": "ipc-main",
     "websiteUrl": "http://electron.atom.io/docs/api/ipc-main",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/ipc-main.md"
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/ipc-main.md"
   },
   {
     "name": "globalShortcut",
@@ -3980,7 +4068,7 @@
     "type": "Module",
     "slug": "global-shortcut",
     "websiteUrl": "http://electron.atom.io/docs/api/global-shortcut",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/global-shortcut.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/global-shortcut.md",
     "methods": [
       {
         "name": "register",
@@ -4040,7 +4128,7 @@
     "type": "Class",
     "slug": "menu",
     "websiteUrl": "http://electron.atom.io/docs/api/menu",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/menu.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/menu.md",
     "staticMethods": [
       {
         "name": "setApplicationMenu",
@@ -4160,7 +4248,7 @@
     "type": "Class",
     "slug": "menu-item",
     "websiteUrl": "http://electron.atom.io/docs/api/menu-item",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/menu-item.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/menu-item.md",
     "constructorMethod": {
       "signature": "(options)",
       "parameters": [
@@ -4263,7 +4351,7 @@
     "type": "Module",
     "slug": "power-monitor",
     "websiteUrl": "http://electron.atom.io/docs/api/power-monitor",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/power-monitor.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/power-monitor.md",
     "events": [
       {
         "name": "suspend",
@@ -4299,7 +4387,7 @@
     "type": "Module",
     "slug": "power-save-blocker",
     "websiteUrl": "http://electron.atom.io/docs/api/power-save-blocker",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/power-save-blocker.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/power-save-blocker.md",
     "methods": [
       {
         "name": "start",
@@ -4366,7 +4454,7 @@
     "type": "Module",
     "slug": "protocol",
     "websiteUrl": "http://electron.atom.io/docs/api/protocol",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/protocol.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/protocol.md",
     "methods": [
       {
         "name": "registerStandardSchemes",
@@ -4609,7 +4697,7 @@
     "type": "Module",
     "slug": "screen",
     "websiteUrl": "http://electron.atom.io/docs/api/screen",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/screen.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/screen.md",
     "methods": [
       {
         "name": "getCursorScreenPoint",
@@ -4769,7 +4857,7 @@
     "type": "Module",
     "slug": "session",
     "websiteUrl": "http://electron.atom.io/docs/api/session",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/session.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/session.md",
     "methods": [
       {
         "name": "fromPartition",
@@ -4809,7 +4897,7 @@
     "type": "Class",
     "slug": "session",
     "websiteUrl": "http://electron.atom.io/docs/api/session",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/session.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/session.md",
     "instanceName": "ses",
     "instanceMethods": [
       {
@@ -4953,7 +5041,7 @@
     "type": "Class",
     "slug": "cookies",
     "websiteUrl": "http://electron.atom.io/docs/api/cookies",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/cookies.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/cookies.md",
     "instanceName": "cookies",
     "instanceMethods": [
       {
@@ -5142,7 +5230,7 @@
     "type": "Class",
     "slug": "web-request",
     "websiteUrl": "http://electron.atom.io/docs/api/web-request",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/web-request.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/web-request.md",
     "instanceName": "webRequest",
     "instanceMethods": [
       {
@@ -5277,7 +5365,7 @@
     "type": "Module",
     "slug": "system-preferences",
     "websiteUrl": "http://electron.atom.io/docs/api/system-preferences",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/system-preferences.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/system-preferences.md",
     "methods": [
       {
         "name": "isDarkMode",
@@ -5467,7 +5555,7 @@
     "type": "Class",
     "slug": "tray",
     "websiteUrl": "http://electron.atom.io/docs/api/tray",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/tray.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/tray.md",
     "constructorMethod": {
       "signature": "(image)",
       "parameters": [
@@ -5890,7 +5978,7 @@
     "type": "Module",
     "slug": "web-contents",
     "websiteUrl": "http://electron.atom.io/docs/api/web-contents",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/web-contents.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/web-contents.md",
     "methods": [
       {
         "name": "getAllWebContents",
@@ -5934,7 +6022,7 @@
     "type": "Class",
     "slug": "web-contents",
     "websiteUrl": "http://electron.atom.io/docs/api/web-contents",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/web-contents.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/web-contents.md",
     "instanceName": "contents",
     "instanceMethods": [
       {
@@ -7083,7 +7171,7 @@
       },
       {
         "name": "new-window",
-        "description": "Emitted when the page requests to open a new window for a url. It could be requested by window.open or an external link like <a target='_blank'>. By default a new BrowserWindow will be created for the url. Calling event.preventDefault() will prevent creating new windows.",
+        "description": "Emitted when the page requests to open a new window for a url. It could be requested by window.open or an external link like <a target='_blank'>. By default a new BrowserWindow will be created for the url. Calling event.preventDefault() will prevent creating new windows. In such case, the event.newGuest may be set with a reference to a BrowserWindow instance to make it used by the Electron's runtime.",
         "returns": [
           {
             "name": "event",
@@ -7106,6 +7194,11 @@
             "name": "options",
             "type": "Object",
             "description": "The options which will be used for creating the new `BrowserWindow`."
+          },
+          {
+            "name": "additionalFeatures",
+            "type": "Array",
+            "description": "The non-standard features (features not handled by Chromium or Electron) given to `window.open()`."
           }
         ]
       },
@@ -7655,7 +7748,7 @@
     "type": "Class",
     "slug": "debugger",
     "websiteUrl": "http://electron.atom.io/docs/api/debugger",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/debugger.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/debugger.md",
     "instanceName": "debugger",
     "instanceMethods": [
       {
@@ -7754,7 +7847,7 @@
     "type": "Module",
     "slug": "process",
     "websiteUrl": "http://electron.atom.io/docs/api/process",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/process.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/process.md",
     "methods": [
       {
         "name": "crash",
@@ -7859,7 +7952,7 @@
     "type": "Module",
     "slug": "desktop-capturer",
     "websiteUrl": "http://electron.atom.io/docs/api/desktop-capturer",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/desktop-capturer.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/desktop-capturer.md",
     "methods": [
       {
         "name": "getSources",
@@ -7901,7 +7994,7 @@
     "type": "Module",
     "slug": "ipc-renderer",
     "websiteUrl": "http://electron.atom.io/docs/api/ipc-renderer",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/ipc-renderer.md"
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/ipc-renderer.md"
   },
   {
     "name": "remote",
@@ -7913,7 +8006,7 @@
     "type": "Module",
     "slug": "remote",
     "websiteUrl": "http://electron.atom.io/docs/api/remote",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/remote.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/remote.md",
     "methods": [
       {
         "name": "require",
@@ -7978,7 +8071,7 @@
     "type": "Module",
     "slug": "web-frame",
     "websiteUrl": "http://electron.atom.io/docs/api/web-frame",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/web-frame.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/web-frame.md",
     "methods": [
       {
         "name": "setZoomFactor",
@@ -8326,7 +8419,7 @@
     "type": "Class",
     "slug": "browser-window-proxy",
     "websiteUrl": "http://electron.atom.io/docs/api/browser-window-proxy",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.2/docs/api/browser-window-proxy.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/browser-window-proxy.md",
     "instanceName": "win",
     "instanceMethods": [
       {
