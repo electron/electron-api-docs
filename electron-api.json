@@ -9,7 +9,7 @@
     "type": "Module",
     "slug": "clipboard",
     "websiteUrl": "http://electron.atom.io/docs/api/clipboard",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/clipboard.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/clipboard.md",
     "methods": [
       {
         "name": "readText",
@@ -286,7 +286,7 @@
               {
                 "name": "bookmark",
                 "type": "String",
-                "description": "The title of the url at <code>text</code>."
+                "description": "The title of the url at ."
               }
             ]
           },
@@ -309,7 +309,7 @@
     "type": "Module",
     "slug": "crash-reporter",
     "websiteUrl": "http://electron.atom.io/docs/api/crash-reporter",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/crash-reporter.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/crash-reporter.md",
     "methods": [
       {
         "name": "start",
@@ -333,17 +333,17 @@
               {
                 "name": "productName",
                 "type": "String",
-                "description": "(optional) - Defaults to <code>app.getName()</code>."
+                "description": "(optional) - Defaults to ."
               },
               {
                 "name": "autoSubmit",
                 "type": "Boolean",
-                "description": "Send the crash report without user interaction. Default is <code>true</code>."
+                "description": "Send the crash report without user interaction. Default is ."
               },
               {
                 "name": "ignoreSystemCrashHandler",
                 "type": "Boolean",
-                "description": "Default is <code>false</code>."
+                "description": "Default is ."
               },
               {
                 "name": "extra",
@@ -395,7 +395,7 @@
     "type": "Module",
     "slug": "native-image",
     "websiteUrl": "http://electron.atom.io/docs/api/native-image",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/native-image.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/native-image.md",
     "methods": [
       {
         "name": "createEmpty",
@@ -461,7 +461,7 @@
     "type": "Class",
     "slug": "native-image",
     "websiteUrl": "http://electron.atom.io/docs/api/native-image",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/native-image.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/native-image.md",
     "instanceName": "image",
     "instanceMethods": [
       {
@@ -629,7 +629,7 @@
               {
                 "name": "quality",
                 "type": "String",
-                "description": "(optional) - The desired quality of the resize image. Possible values are <code>good</code>, <code>better</code> or <code>best</code>. The default is <code>best</code>. These values express a desired quality/speed tradeoff. They are translated into an algorithm-specific method that depends on the capabilities (CPU, GPU) of the underlying platform. It is possible for all three methods to be mapped to the same algorithm on a given platform."
+                "description": "(optional) - The desired quality of the resize image. Possible values are , or . The default is . These values express a desired quality/speed tradeoff. They are translated into an algorithm-specific method that depends on the capabilities (CPU, GPU) of the underlying platform. It is possible for all three methods to be mapped to the same algorithm on a given platform."
               }
             ]
           }
@@ -659,7 +659,7 @@
     "type": "Module",
     "slug": "shell",
     "websiteUrl": "http://electron.atom.io/docs/api/shell",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/shell.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/shell.md",
     "methods": [
       {
         "name": "showItemInFolder",
@@ -708,7 +708,7 @@
               {
                 "name": "activate",
                 "type": "Boolean",
-                "description": "<code>true</code> to bring the opened application to the foreground. The default is <code>true</code>."
+                "description": "to bring the opened application to the foreground. The default is ."
               }
             ]
           }
@@ -771,44 +771,7 @@
           },
           {
             "name": "options",
-            "type": "Object",
-            "properties": [
-              {
-                "name": "target",
-                "type": "String",
-                "description": "The target to launch from this shortcut."
-              },
-              {
-                "name": "cwd",
-                "type": "String",
-                "description": "(optional) - The working directory. Default is empty."
-              },
-              {
-                "name": "args",
-                "type": "String",
-                "description": "(optional) - The arguments to be applied to <code>target</code> when launching from this shortcut. Default is empty."
-              },
-              {
-                "name": "description",
-                "type": "String",
-                "description": "(optional) - The description of the shortcut. Default is empty."
-              },
-              {
-                "name": "icon",
-                "type": "String",
-                "description": "(optional) - The path to the icon, can be a DLL or EXE. <code>icon</code> and <code>iconIndex</code> have to be set together. Default is empty, which uses the target's icon."
-              },
-              {
-                "name": "iconIndex",
-                "type": "Integer",
-                "description": "(optional) - The resource ID of icon when <code>icon</code> is a DLL or EXE. Default is 0."
-              },
-              {
-                "name": "appUserModelId",
-                "type": "String",
-                "description": "(optional) - The Application User Model ID. Default is empty."
-              }
-            ]
+            "type": "ShortcutDetails"
           }
         ],
         "returns": {
@@ -830,49 +793,7 @@
           }
         ],
         "returns": {
-          "type": "Object",
-          "properties": [
-            {
-              "name": "shortcutPath",
-              "type": "String",
-              "description": ""
-            },
-            {
-              "name": "target",
-              "type": "String",
-              "description": "The target to launch from this shortcut."
-            },
-            {
-              "name": "cwd",
-              "type": "String",
-              "description": "(optional) - The working directory. Default is empty."
-            },
-            {
-              "name": "args",
-              "type": "String",
-              "description": "(optional) - The arguments to be applied to <code>target</code> when launching from this shortcut. Default is empty."
-            },
-            {
-              "name": "description",
-              "type": "String",
-              "description": "(optional) - The description of the shortcut. Default is empty."
-            },
-            {
-              "name": "icon",
-              "type": "String",
-              "description": "(optional) - The path to the icon, can be a DLL or EXE. <code>icon</code> and <code>iconIndex</code> have to be set together. Default is empty, which uses the target's icon."
-            },
-            {
-              "name": "iconIndex",
-              "type": "Integer",
-              "description": "(optional) - The resource ID of icon when <code>icon</code> is a DLL or EXE. Default is 0."
-            },
-            {
-              "name": "appUserModelId",
-              "type": "String",
-              "description": "(optional) - The Application User Model ID. Default is empty."
-            }
-          ]
+          "type": "ShortcutDetails"
         }
       }
     ]
@@ -887,7 +808,7 @@
     "type": "Module",
     "slug": "app",
     "websiteUrl": "http://electron.atom.io/docs/api/app",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/app.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/app.md",
     "methods": [
       {
         "name": "quit",
@@ -1157,7 +1078,7 @@
         "parameters": [
           {
             "name": "tasks",
-            "type": "Array",
+            "type": "Task[]",
             "description": "Array of `Task` objects"
           }
         ],
@@ -1178,12 +1099,12 @@
             {
               "name": "minItems",
               "type": "Integer",
-              "description": "The minimum number of items that will be shown in the Jump List (for a more detailed description of this value see the <a href=\"https://msdn.microsoft.com/en-us/library/windows/desktop/dd378398(v=vs.85).aspx\">MSDN docs</a>)."
+              "description": "The minimum number of items that will be shown in the Jump List (for a more detailed description of this value see the )."
             },
             {
               "name": "removedItems",
-              "type": "Array",
-              "description": "Array of <code>JumpListItem</code> objects that correspond to items that the user has explicitly removed from custom categories in the Jump List. These items must not be re-added to the Jump List in the <strong>next</strong> call to <code>app.setJumpList()</code>, Windows will not display any custom category that contains any of the removed items."
+              "type": "JumpListItem[]",
+              "description": "Array of objects that correspond to items that the user has explicitly removed from custom categories in the Jump List. These items must not be re-added to the Jump List in the call to , Windows will not display any custom category that contains any of the removed items."
             }
           ]
         }
@@ -1198,7 +1119,7 @@
         "parameters": [
           {
             "name": "categories",
-            "type": "Array",
+            "type": "JumpListCategory[]",
             "description": "or `null` - Array of `JumpListCategory` objects."
           }
         ]
@@ -1360,27 +1281,27 @@
             {
               "name": "openAtLogin",
               "type": "Boolean",
-              "description": "<code>true</code> if the app is set to open at login."
+              "description": "if the app is set to open at login."
             },
             {
               "name": "openAsHidden",
               "type": "Boolean",
-              "description": "<code>true</code> if the app is set to open as hidden at login. This setting is only supported on macOS."
+              "description": "if the app is set to open as hidden at login. This setting is only supported on macOS."
             },
             {
               "name": "wasOpenedAtLogin",
               "type": "Boolean",
-              "description": "<code>true</code> if the app was opened at login automatically. This setting is only supported on macOS."
+              "description": "if the app was opened at login automatically. This setting is only supported on macOS."
             },
             {
               "name": "wasOpenedAsHidden",
               "type": "Boolean",
-              "description": "<code>true</code> if the app was opened as a hidden login item. This indicates that the app should not open any windows at startup. This setting is only supported on macOS."
+              "description": "if the app was opened as a hidden login item. This indicates that the app should not open any windows at startup. This setting is only supported on macOS."
             },
             {
               "name": "restoreState",
               "type": "Boolean",
-              "description": "<code>true</code> if the app was opened as a login item that should restore the state from the previous session. This indicates that the app should restore the windows that were open the last time the app was closed. This setting is only supported on macOS."
+              "description": "if the app was opened as a login item that should restore the state from the previous session. This indicates that the app should restore the windows that were open the last time the app was closed. This setting is only supported on macOS."
             }
           ]
         }
@@ -1401,12 +1322,12 @@
               {
                 "name": "openAtLogin",
                 "type": "Boolean",
-                "description": "<code>true</code> to open the app at login, <code>false</code> to remove the app as a login item. Defaults to <code>false</code>."
+                "description": "to open the app at login, to remove the app as a login item. Defaults to ."
               },
               {
                 "name": "openAsHidden",
                 "type": "Boolean",
-                "description": "<code>true</code> to open the app as hidden. Defaults to <code>false</code>. The user can edit this setting from the System Preferences so <code>app.getLoginItemStatus().wasOpenedAsHidden</code> should be checked when the app is opened to know the current value. This setting is only supported on macOS."
+                "description": "to open the app as hidden. Defaults to . The user can edit this setting from the System Preferences so should be checked when the app is opened to know the current value. This setting is only supported on macOS."
               }
             ]
           }
@@ -1423,6 +1344,47 @@
           "type": "Boolean",
           "description": "true if Chrome's accessibility support is enabled, false otherwise. This API will return true if the use of assistive technologies, such as screen readers, has been detected. See https://www.chromium.org/developers/design-documents/accessibility for more details."
         }
+      },
+      {
+        "name": "setAboutPanelOptions",
+        "signature": "(options)",
+        "platforms": [
+          "macOS"
+        ],
+        "description": "Set the about panel options. This will override the values defined in the app's .plist file. See the Apple docs for more details.",
+        "parameters": [
+          {
+            "name": "options",
+            "type": "Object",
+            "properties": [
+              {
+                "name": "applicationName",
+                "type": "String",
+                "description": "(optional) - The app's name."
+              },
+              {
+                "name": "applicationVersion",
+                "type": "String",
+                "description": "(optional) - The app's version."
+              },
+              {
+                "name": "copyright",
+                "type": "String",
+                "description": "(optional) - Copyright information."
+              },
+              {
+                "name": "credits",
+                "type": "String",
+                "description": "(optional) - Credit information."
+              },
+              {
+                "name": "version",
+                "type": "String",
+                "description": "(optional) - The app's build version number."
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "appendSwitch",
@@ -1846,7 +1808,7 @@
           },
           {
             "name": "certificateList",
-            "type": "[Objects]"
+            "type": "Certificate[]"
           },
           {
             "name": "callback",
@@ -1969,7 +1931,7 @@
     "type": "Module",
     "slug": "auto-updater",
     "websiteUrl": "http://electron.atom.io/docs/api/auto-updater",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/auto-updater.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/auto-updater.md",
     "methods": [
       {
         "name": "setFeedURL",
@@ -2067,7 +2029,7 @@
     "type": "Class",
     "slug": "browser-window",
     "websiteUrl": "http://electron.atom.io/docs/api/browser-window",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/browser-window.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/browser-window.md",
     "staticMethods": [
       {
         "name": "getAllWindows",
@@ -2155,27 +2117,27 @@
             {
               "name": "width",
               "type": "Integer",
-              "description": "Window's width in pixels. Default is <code>800</code>."
+              "description": "Window's width in pixels. Default is ."
             },
             {
               "name": "height",
               "type": "Integer",
-              "description": "Window's height in pixels. Default is <code>600</code>."
+              "description": "Window's height in pixels. Default is ."
             },
             {
               "name": "x",
               "type": "Integer",
-              "description": "(<strong>required</strong> if y is used) - Window's left offset from screen. Default is to center the window."
+              "description": "( if y is used) - Window's left offset from screen. Default is to center the window."
             },
             {
               "name": "y",
               "type": "Integer",
-              "description": "(<strong>required</strong> if x is used) - Window's top offset from screen. Default is to center the window."
+              "description": "( if x is used) - Window's top offset from screen. Default is to center the window."
             },
             {
               "name": "useContentSize",
               "type": "Boolean",
-              "description": "The <code>width</code> and <code>height</code> would be used as web page's size, which means the actual window's size will include window frame's size and be slightly larger. Default is <code>false</code>."
+              "description": "The and would be used as web page's size, which means the actual window's size will include window frame's size and be slightly larger. Default is ."
             },
             {
               "name": "center",
@@ -2185,12 +2147,12 @@
             {
               "name": "minWidth",
               "type": "Integer",
-              "description": "Window's minimum width. Default is <code>0</code>."
+              "description": "Window's minimum width. Default is ."
             },
             {
               "name": "minHeight",
               "type": "Integer",
-              "description": "Window's minimum height. Default is <code>0</code>."
+              "description": "Window's minimum height. Default is ."
             },
             {
               "name": "maxWidth",
@@ -2205,127 +2167,127 @@
             {
               "name": "resizable",
               "type": "Boolean",
-              "description": "Whether window is resizable. Default is <code>true</code>."
+              "description": "Whether window is resizable. Default is ."
             },
             {
               "name": "movable",
               "type": "Boolean",
-              "description": "Whether window is movable. This is not implemented on Linux. Default is <code>true</code>."
+              "description": "Whether window is movable. This is not implemented on Linux. Default is ."
             },
             {
               "name": "minimizable",
               "type": "Boolean",
-              "description": "Whether window is minimizable. This is not implemented on Linux. Default is <code>true</code>."
+              "description": "Whether window is minimizable. This is not implemented on Linux. Default is ."
             },
             {
               "name": "maximizable",
               "type": "Boolean",
-              "description": "Whether window is maximizable. This is not implemented on Linux. Default is <code>true</code>."
+              "description": "Whether window is maximizable. This is not implemented on Linux. Default is ."
             },
             {
               "name": "closable",
               "type": "Boolean",
-              "description": "Whether window is closable. This is not implemented on Linux. Default is <code>true</code>."
+              "description": "Whether window is closable. This is not implemented on Linux. Default is ."
             },
             {
               "name": "focusable",
               "type": "Boolean",
-              "description": "Whether the window can be focused. Default is <code>true</code>. On Windows setting <code>focusable: false</code> also implies setting <code>skipTaskbar: true</code>. On Linux setting <code>focusable: false</code> makes the window stop interacting with wm, so the window will always stay on top in all workspaces."
+              "description": "Whether the window can be focused. Default is . On Windows setting also implies setting . On Linux setting makes the window stop interacting with wm, so the window will always stay on top in all workspaces."
             },
             {
               "name": "alwaysOnTop",
               "type": "Boolean",
-              "description": "Whether the window should always stay on top of other windows. Default is <code>false</code>."
+              "description": "Whether the window should always stay on top of other windows. Default is ."
             },
             {
               "name": "fullscreen",
               "type": "Boolean",
-              "description": "Whether the window should show in fullscreen. When explicitly set to <code>false</code> the fullscreen button will be hidden or disabled on macOS. Default is <code>false</code>."
+              "description": "Whether the window should show in fullscreen. When explicitly set to the fullscreen button will be hidden or disabled on macOS. Default is ."
             },
             {
               "name": "fullscreenable",
               "type": "Boolean",
-              "description": "Whether the window can be put into fullscreen mode. On macOS, also whether the maximize/zoom button should toggle full screen mode or maximize window. Default is <code>true</code>."
+              "description": "Whether the window can be put into fullscreen mode. On macOS, also whether the maximize/zoom button should toggle full screen mode or maximize window. Default is ."
             },
             {
               "name": "skipTaskbar",
               "type": "Boolean",
-              "description": "Whether to show the window in taskbar. Default is <code>false</code>."
+              "description": "Whether to show the window in taskbar. Default is ."
             },
             {
               "name": "kiosk",
               "type": "Boolean",
-              "description": "The kiosk mode. Default is <code>false</code>."
+              "description": "The kiosk mode. Default is ."
             },
             {
               "name": "title",
               "type": "String",
-              "description": "Default window title. Default is <code>\"Electron\"</code>."
+              "description": "Default window title. Default is ."
             },
             {
               "name": "icon",
               "type": "NativeImage",
-              "description": "The window icon. On Windows it is recommended to use <code>ICO</code> icons to get best visual effects, you can also leave it undefined so the executable's icon will be used."
+              "description": "The window icon. On Windows it is recommended to use icons to get best visual effects, you can also leave it undefined so the executable's icon will be used."
             },
             {
               "name": "show",
               "type": "Boolean",
-              "description": "Whether window should be shown when created. Default is <code>true</code>."
+              "description": "Whether window should be shown when created. Default is ."
             },
             {
               "name": "frame",
               "type": "Boolean",
-              "description": "Specify <code>false</code> to create a <a href=\"frameless-window.md\">Frameless Window</a>. Default is <code>true</code>."
+              "description": "Specify to create a . Default is ."
             },
             {
               "name": "parent",
               "type": "BrowserWindow",
-              "description": "Specify parent window. Default is <code>null</code>."
+              "description": "Specify parent window. Default is ."
             },
             {
               "name": "modal",
               "type": "Boolean",
-              "description": "Whether this is a modal window. This only works when the window is a child window. Default is <code>false</code>."
+              "description": "Whether this is a modal window. This only works when the window is a child window. Default is ."
             },
             {
               "name": "acceptFirstMouse",
               "type": "Boolean",
-              "description": "Whether the web view accepts a single mouse-down event that simultaneously activates the window. Default is <code>false</code>."
+              "description": "Whether the web view accepts a single mouse-down event that simultaneously activates the window. Default is ."
             },
             {
               "name": "disableAutoHideCursor",
               "type": "Boolean",
-              "description": "Whether to hide cursor when typing. Default is <code>false</code>."
+              "description": "Whether to hide cursor when typing. Default is ."
             },
             {
               "name": "autoHideMenuBar",
               "type": "Boolean",
-              "description": "Auto hide the menu bar unless the <code>Alt</code> key is pressed. Default is <code>false</code>."
+              "description": "Auto hide the menu bar unless the key is pressed. Default is ."
             },
             {
               "name": "enableLargerThanScreen",
               "type": "Boolean",
-              "description": "Enable the window to be resized larger than screen. Default is <code>false</code>."
+              "description": "Enable the window to be resized larger than screen. Default is ."
             },
             {
               "name": "backgroundColor",
               "type": "String",
-              "description": "Window's background color as Hexadecimal value, like <code>#66CD00</code> or <code>#FFF</code> or <code>#80FFFFFF</code> (alpha is supported). Default is <code>#FFF</code> (white)."
+              "description": "Window's background color as Hexadecimal value, like or or (alpha is supported). Default is (white)."
             },
             {
               "name": "hasShadow",
               "type": "Boolean",
-              "description": "Whether window should have a shadow. This is only implemented on macOS. Default is <code>true</code>."
+              "description": "Whether window should have a shadow. This is only implemented on macOS. Default is ."
             },
             {
               "name": "darkTheme",
               "type": "Boolean",
-              "description": "Forces using dark theme for the window, only works on some GTK+3 desktop environments. Default is <code>false</code>."
+              "description": "Forces using dark theme for the window, only works on some GTK+3 desktop environments. Default is ."
             },
             {
               "name": "transparent",
               "type": "Boolean",
-              "description": "Makes the window <a href=\"frameless-window.md\">transparent</a>. Default is <code>false</code>."
+              "description": "Makes the window . Default is ."
             },
             {
               "name": "type",
@@ -2340,7 +2302,7 @@
             {
               "name": "thickFrame",
               "type": "Boolean",
-              "description": "Use <code>WS_THICKFRAME</code> style for frameless windows on Windows, which adds standard window frame. Setting it to <code>false</code> will remove window shadow and window animations. Default is <code>true</code>."
+              "description": "Use style for frameless windows on Windows, which adds standard window frame. Setting it to will remove window shadow and window animations. Default is ."
             },
             {
               "name": "webPreferences",
@@ -2510,34 +2472,12 @@
       },
       {
         "name": "setBounds",
-        "signature": "(options[, animate])",
-        "description": "Resizes and moves the window to width, height, x, y.",
+        "signature": "(bounds[, animate])",
+        "description": "Resizes and moves the window to the supplied bounds",
         "parameters": [
           {
-            "name": "options",
-            "type": "Object",
-            "properties": [
-              {
-                "name": "x",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "y",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "width",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "height",
-                "type": "Integer",
-                "description": ""
-              }
-            ]
+            "name": "bounds",
+            "type": "Rectangle"
           },
           {
             "name": "animate",
@@ -2550,61 +2490,17 @@
         "name": "getBounds",
         "signature": "()",
         "returns": {
-          "type": "Object",
-          "properties": [
-            {
-              "name": "width",
-              "type": "Integer",
-              "description": ""
-            },
-            {
-              "name": "height",
-              "type": "Integer",
-              "description": ""
-            },
-            {
-              "name": "x",
-              "type": "Integer",
-              "description": ""
-            },
-            {
-              "name": "y",
-              "type": "Integer",
-              "description": ""
-            }
-          ]
+          "type": "Rectangle"
         }
       },
       {
         "name": "setContentBounds",
-        "signature": "(options[, animate])",
-        "description": "Resizes and moves the window's client area (e.g. the web page) to width, height, x, y.",
+        "signature": "(bounds[, animate])",
+        "description": "Resizes and moves the window's client area (e.g. the web page) to the supplied bounds.",
         "parameters": [
           {
-            "name": "options",
-            "type": "Object",
-            "properties": [
-              {
-                "name": "x",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "y",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "width",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "height",
-                "type": "Integer",
-                "description": ""
-              }
-            ]
+            "name": "bounds",
+            "type": "Rectangle"
           },
           {
             "name": "animate",
@@ -2616,31 +2512,8 @@
       {
         "name": "getContentBounds",
         "signature": "()",
-        "description": "Returns an object that contains the window's client area (e.g. the web page) width, height, x and y values.",
         "returns": {
-          "type": "Object",
-          "properties": [
-            {
-              "name": "width",
-              "type": "Integer",
-              "description": ""
-            },
-            {
-              "name": "height",
-              "type": "Integer",
-              "description": ""
-            },
-            {
-              "name": "x",
-              "type": "Integer",
-              "description": ""
-            },
-            {
-              "name": "y",
-              "type": "Integer",
-              "description": ""
-            }
-          ]
+          "type": "Rectangle"
         }
       },
       {
@@ -3160,30 +3033,8 @@
         "parameters": [
           {
             "name": "rect",
-            "type": "Object",
-            "description": "(optional) - The area of the page to be captured",
-            "properties": [
-              {
-                "name": "x",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "y",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "width",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "height",
-                "type": "Integer",
-                "description": ""
-              }
-            ]
+            "type": "Rectangle",
+            "description": "(optional) - The bounds to capture"
           },
           {
             "name": "callback",
@@ -3261,7 +3112,7 @@
               {
                 "name": "mode",
                 "type": "String",
-                "description": "<em>Windows</em> - Mode for the progress bar (<code>none</code>, <code>normal</code>, <code>indeterminate</code>, <code>error</code>, or <code>paused</code>)"
+                "description": "- Mode for the progress bar (, , , , or )"
               }
             ]
           }
@@ -3323,9 +3174,13 @@
         "parameters": [
           {
             "name": "buttons",
-            "type": "Array"
+            "type": "ThumbarButton[]"
           }
-        ]
+        ],
+        "returns": {
+          "type": "Boolean",
+          "description": "Whether the buttons were added successfully"
+        }
       },
       {
         "name": "setThumbnailClip",
@@ -3337,30 +3192,8 @@
         "parameters": [
           {
             "name": "region",
-            "type": "Object",
-            "description": "Region of the window",
-            "properties": [
-              {
-                "name": "x",
-                "type": "Integer",
-                "description": "x-position of region"
-              },
-              {
-                "name": "y",
-                "type": "Integer",
-                "description": "y-position of region"
-              },
-              {
-                "name": "width",
-                "type": "Integer",
-                "description": "width of region"
-              },
-              {
-                "name": "height",
-                "type": "Integer",
-                "description": "height of region"
-              }
-            ]
+            "type": "Rectangle",
+            "description": "Region of the window"
           }
         ]
       },
@@ -3712,7 +3545,7 @@
     "type": "Module",
     "slug": "content-tracing",
     "websiteUrl": "http://electron.atom.io/docs/api/content-tracing",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/content-tracing.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/content-tracing.md",
     "methods": [
       {
         "name": "getCategories",
@@ -3867,7 +3700,7 @@
     "type": "Module",
     "slug": "dialog",
     "websiteUrl": "http://electron.atom.io/docs/api/dialog",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/dialog.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/dialog.md",
     "methods": [
       {
         "name": "showOpenDialog",
@@ -3906,7 +3739,7 @@
               {
                 "name": "properties",
                 "type": "String[]",
-                "description": "Contains which features the dialog should use, can contain <code>openFile</code>, <code>openDirectory</code>, <code>multiSelections</code>, <code>createDirectory</code> and <code>showHiddenFiles</code>."
+                "description": "Contains which features the dialog should use, can contain , , , and ."
               }
             ]
           },
@@ -3977,7 +3810,7 @@
               {
                 "name": "type",
                 "type": "String",
-                "description": "Can be <code>\"none\"</code>, <code>\"info\"</code>, <code>\"error\"</code>, <code>\"question\"</code> or <code>\"warning\"</code>. On Windows, \"question\" displays the same icon as \"info\", unless you set an icon using the \"icon\" option."
+                "description": "Can be , , , or . On Windows, \"question\" displays the same icon as \"info\", unless you set an icon using the \"icon\" option."
               },
               {
                 "name": "buttons",
@@ -4012,12 +3845,12 @@
               {
                 "name": "cancelId",
                 "type": "Integer",
-                "description": "The value will be returned when user cancels the dialog instead of clicking the buttons of the dialog. By default it is the index of the buttons that have \"cancel\" or \"no\" as label, or 0 if there is no such buttons. On macOS and Windows the index of \"Cancel\" button will always be used as <code>cancelId</code>, not matter whether it is already specified."
+                "description": "The value will be returned when user cancels the dialog instead of clicking the buttons of the dialog. By default it is the index of the buttons that have \"cancel\" or \"no\" as label, or 0 if there is no such buttons. On macOS and Windows the index of \"Cancel\" button will always be used as , not matter whether it is already specified."
               },
               {
                 "name": "noLink",
                 "type": "Boolean",
-                "description": "On Windows Electron will try to figure out which one of the <code>buttons</code> are common buttons (like \"Cancel\" or \"Yes\"), and show the others as command links in the dialog. This can make the dialog appear in the style of modern Windows apps. If you don't like this behavior, you can set <code>noLink</code> to <code>true</code>."
+                "description": "On Windows Electron will try to figure out which one of the are common buttons (like \"Cancel\" or \"Yes\"), and show the others as command links in the dialog. This can make the dialog appear in the style of modern Windows apps. If you don't like this behavior, you can set to ."
               }
             ]
           },
@@ -4056,7 +3889,7 @@
     "type": "Module",
     "slug": "ipc-main",
     "websiteUrl": "http://electron.atom.io/docs/api/ipc-main",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/ipc-main.md"
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/ipc-main.md"
   },
   {
     "name": "globalShortcut",
@@ -4068,7 +3901,7 @@
     "type": "Module",
     "slug": "global-shortcut",
     "websiteUrl": "http://electron.atom.io/docs/api/global-shortcut",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/global-shortcut.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/global-shortcut.md",
     "methods": [
       {
         "name": "register",
@@ -4128,7 +3961,7 @@
     "type": "Class",
     "slug": "menu",
     "websiteUrl": "http://electron.atom.io/docs/api/menu",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/menu.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/menu.md",
     "staticMethods": [
       {
         "name": "setApplicationMenu",
@@ -4248,7 +4081,7 @@
     "type": "Class",
     "slug": "menu-item",
     "websiteUrl": "http://electron.atom.io/docs/api/menu-item",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/menu-item.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/menu-item.md",
     "constructorMethod": {
       "signature": "(options)",
       "parameters": [
@@ -4259,17 +4092,17 @@
             {
               "name": "click",
               "type": "Function",
-              "description": "Will be called with <code>click(menuItem, browserWindow, event)</code> when the menu item is clicked."
+              "description": "Will be called with when the menu item is clicked."
             },
             {
               "name": "role",
               "type": "String",
-              "description": "Define the action of the menu item, when specified the <code>click</code> property will be ignored."
+              "description": "Define the action of the menu item, when specified the property will be ignored."
             },
             {
               "name": "type",
               "type": "String",
-              "description": "Can be <code>normal</code>, <code>separator</code>, <code>submenu</code>, <code>checkbox</code> or <code>radio</code>."
+              "description": "Can be , , , or ."
             },
             {
               "name": "label",
@@ -4304,12 +4137,12 @@
             {
               "name": "checked",
               "type": "Boolean",
-              "description": "Should only be specified for <code>checkbox</code> or <code>radio</code> type menu items."
+              "description": "Should only be specified for or type menu items."
             },
             {
               "name": "submenu",
               "type": "Menu",
-              "description": "Should be specified for <code>submenu</code> type menu items. If <code>submenu</code> is specified, the <code>type: 'submenu'</code> can be omitted. If the value is not a <code>Menu</code> then it will be automatically converted to one using <code>Menu.buildFromTemplate</code>."
+              "description": "Should be specified for type menu items. If is specified, the can be omitted. If the value is not a then it will be automatically converted to one using ."
             },
             {
               "name": "id",
@@ -4351,7 +4184,7 @@
     "type": "Module",
     "slug": "power-monitor",
     "websiteUrl": "http://electron.atom.io/docs/api/power-monitor",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/power-monitor.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/power-monitor.md",
     "events": [
       {
         "name": "suspend",
@@ -4387,7 +4220,7 @@
     "type": "Module",
     "slug": "power-save-blocker",
     "websiteUrl": "http://electron.atom.io/docs/api/power-save-blocker",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/power-save-blocker.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/power-save-blocker.md",
     "methods": [
       {
         "name": "start",
@@ -4454,7 +4287,7 @@
     "type": "Module",
     "slug": "protocol",
     "websiteUrl": "http://electron.atom.io/docs/api/protocol",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/protocol.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/protocol.md",
     "methods": [
       {
         "name": "registerStandardSchemes",
@@ -4697,7 +4530,7 @@
     "type": "Module",
     "slug": "screen",
     "websiteUrl": "http://electron.atom.io/docs/api/screen",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/screen.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/screen.md",
     "methods": [
       {
         "name": "getCursorScreenPoint",
@@ -4767,29 +4600,7 @@
         "parameters": [
           {
             "name": "rect",
-            "type": "Object",
-            "properties": [
-              {
-                "name": "x",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "y",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "width",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "height",
-                "type": "Integer",
-                "description": ""
-              }
-            ]
+            "type": "Rectangle"
           }
         ],
         "returns": {
@@ -4809,7 +4620,7 @@
           },
           {
             "name": "newDisplay",
-            "type": "Object"
+            "type": "Display"
           }
         ]
       },
@@ -4823,7 +4634,7 @@
           },
           {
             "name": "oldDisplay",
-            "type": "Object"
+            "type": "Display"
           }
         ]
       },
@@ -4837,7 +4648,7 @@
           },
           {
             "name": "display",
-            "type": "Object"
+            "type": "Display"
           },
           {
             "name": "changedMetrics",
@@ -4857,7 +4668,7 @@
     "type": "Module",
     "slug": "session",
     "websiteUrl": "http://electron.atom.io/docs/api/session",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/session.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/session.md",
     "methods": [
       {
         "name": "fromPartition",
@@ -4897,7 +4708,7 @@
     "type": "Class",
     "slug": "session",
     "websiteUrl": "http://electron.atom.io/docs/api/session",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/session.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/session.md",
     "instanceName": "ses",
     "instanceMethods": [
       {
@@ -4936,17 +4747,17 @@
               {
                 "name": "origin",
                 "type": "String",
-                "description": "Should follow <code>window.location.origin</code>’s representation <code>scheme://host:port</code>."
+                "description": "Should follow ’s representation ."
               },
               {
                 "name": "storages",
                 "type": "String[]",
-                "description": "The types of storages to clear, can contain: <code>appcache</code>, <code>cookies</code>, <code>filesystem</code>, <code>indexdb</code>, <code>local storage</code>, <code>shadercache</code>, <code>websql</code>, <code>serviceworkers</code>"
+                "description": "The types of storages to clear, can contain: , , , , , , ,"
               },
               {
                 "name": "quotas",
                 "type": "String[]",
-                "description": "The types of quotas to clear, can contain: <code>temporary</code>, <code>persistent</code>, <code>syncable</code>."
+                "description": "The types of quotas to clear, can contain: , , ."
               }
             ]
           },
@@ -5041,7 +4852,7 @@
     "type": "Class",
     "slug": "cookies",
     "websiteUrl": "http://electron.atom.io/docs/api/cookies",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/cookies.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/cookies.md",
     "instanceName": "cookies",
     "instanceMethods": [
       {
@@ -5056,7 +4867,7 @@
               {
                 "name": "url",
                 "type": "String",
-                "description": "(optional) - Retrieves cookies which are associated with <code>url</code>. Empty implies retrieving cookies of all urls."
+                "description": "(optional) - Retrieves cookies which are associated with . Empty implies retrieving cookies of all urls."
               },
               {
                 "name": "name",
@@ -5066,12 +4877,12 @@
               {
                 "name": "domain",
                 "type": "String",
-                "description": "(optional) - Retrieves cookies whose domains match or are subdomains of <code>domains</code>"
+                "description": "(optional) - Retrieves cookies whose domains match or are subdomains of"
               },
               {
                 "name": "path",
                 "type": "String",
-                "description": "(optional) - Retrieves cookies whose path matches <code>path</code>."
+                "description": "(optional) - Retrieves cookies whose path matches ."
               },
               {
                 "name": "secure",
@@ -5230,7 +5041,7 @@
     "type": "Class",
     "slug": "web-request",
     "websiteUrl": "http://electron.atom.io/docs/api/web-request",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/web-request.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/web-request.md",
     "instanceName": "webRequest",
     "instanceMethods": [
       {
@@ -5365,7 +5176,7 @@
     "type": "Module",
     "slug": "system-preferences",
     "websiteUrl": "http://electron.atom.io/docs/api/system-preferences",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/system-preferences.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/system-preferences.md",
     "methods": [
       {
         "name": "isDarkMode",
@@ -5375,7 +5186,7 @@
         ],
         "returns": {
           "type": "Boolean",
-          "description": "Whether the the system is in Dark Mode."
+          "description": "Whether the system is in Dark Mode."
         }
       },
       {
@@ -5522,7 +5333,161 @@
         "platforms": [
           "Windows"
         ],
-        "description": "Returns the users current system wide color preference in the form of an RGBA hexadecimal string."
+        "returns": {
+          "type": "String",
+          "description": "The users current system wide accent color preference in RGBA hexadecimal form."
+        }
+      },
+      {
+        "name": "getColor",
+        "signature": "(color)",
+        "platforms": [
+          "Windows"
+        ],
+        "parameters": [
+          {
+            "name": "color",
+            "type": "String",
+            "description": "One of the following values:",
+            "possibleValues": [
+              {
+                "value": "3d-dark-shadow",
+                "description": "Dark shadow for three-dimensional display elements."
+              },
+              {
+                "value": "3d-face",
+                "description": "Face color for three-dimensional display elements and for dialog box backgrounds."
+              },
+              {
+                "value": "3d-highlight",
+                "description": "Highlight color for three-dimensional display elements."
+              },
+              {
+                "value": "3d-light",
+                "description": "Light color for three-dimensional display elements."
+              },
+              {
+                "value": "3d-shadow",
+                "description": "Shadow color for three-dimensional display elements."
+              },
+              {
+                "value": "active-border",
+                "description": "Active window border."
+              },
+              {
+                "value": "active-caption",
+                "description": "Active window title bar. Specifies the left side color in the color gradient of an active window's title bar if the gradient effect is enabled."
+              },
+              {
+                "value": "active-caption-gradient",
+                "description": "Right side color in the color gradient of an active window's title bar."
+              },
+              {
+                "value": "app-workspace",
+                "description": "Background color of multiple document interface (MDI) applications."
+              },
+              {
+                "value": "button-text",
+                "description": "Text on push buttons."
+              },
+              {
+                "value": "caption-text",
+                "description": "Text in caption, size box, and scroll bar arrow box."
+              },
+              {
+                "value": "desktop",
+                "description": "Desktop background color."
+              },
+              {
+                "value": "disabled-text",
+                "description": "Grayed (disabled) text."
+              },
+              {
+                "value": "highlight",
+                "description": "Item(s) selected in a control."
+              },
+              {
+                "value": "highlight-text",
+                "description": "Text of item(s) selected in a control."
+              },
+              {
+                "value": "hotlight",
+                "description": "Color for a hyperlink or hot-tracked item."
+              },
+              {
+                "value": "inactive-border",
+                "description": "Inactive window border."
+              },
+              {
+                "value": "inactive-caption",
+                "description": "Inactive window caption. Specifies the left side color in the color gradient of an inactive window's title bar if the gradient effect is enabled."
+              },
+              {
+                "value": "inactive-caption-gradient",
+                "description": "Right side color in the color gradient of an inactive window's title bar."
+              },
+              {
+                "value": "inactive-caption-text",
+                "description": "Color of text in an inactive caption."
+              },
+              {
+                "value": "info-background",
+                "description": "Background color for tooltip controls."
+              },
+              {
+                "value": "info-text",
+                "description": "Text color for tooltip controls."
+              },
+              {
+                "value": "menu",
+                "description": "Menu background."
+              },
+              {
+                "value": "menu-highlight",
+                "description": "The color used to highlight menu items when the menu appears as a flat menu."
+              },
+              {
+                "value": "menubar",
+                "description": "The background color for the menu bar when menus appear as flat menus."
+              },
+              {
+                "value": "menu-text",
+                "description": "Text in menus."
+              },
+              {
+                "value": "scrollbar",
+                "description": "Scroll bar gray area."
+              },
+              {
+                "value": "window",
+                "description": "Window background."
+              },
+              {
+                "value": "window-frame",
+                "description": "Window frame."
+              },
+              {
+                "value": "window-text",
+                "description": "Text in windows."
+              }
+            ]
+          }
+        ],
+        "returns": {
+          "type": "String",
+          "description": "The system color setting in RGB hexadecimal form (#ABCDEF). See the Windows docs for more details."
+        }
+      },
+      {
+        "name": "isInvertedColorScheme",
+        "signature": "()",
+        "platforms": [
+          "Windows"
+        ],
+        "returns": {
+          "type": "Boolean",
+          "description": "true if an inverted color scheme, such as a high contrast theme, is active, false otherwise."
+        }
       }
     ],
     "events": [
@@ -5542,6 +5507,35 @@
             "description": "The new RGBA color the user assigned to be there system accent color."
           }
         ]
+      },
+      {
+        "name": "color-changed",
+        "platforms": [
+          "Windows"
+        ],
+        "returns": [
+          {
+            "name": "event",
+            "type": "Event"
+          }
+        ]
+      },
+      {
+        "name": "inverted-color-scheme-changed",
+        "platforms": [
+          "Windows"
+        ],
+        "returns": [
+          {
+            "name": "event",
+            "type": "Event"
+          },
+          {
+            "name": "invertedColorScheme",
+            "type": "Boolean",
+            "description": "`true` if an inverted color scheme, such as a high contrast theme, is being used, `false` otherwise."
+          }
+        ]
       }
     ]
   },
@@ -5555,7 +5549,7 @@
     "type": "Class",
     "slug": "tray",
     "websiteUrl": "http://electron.atom.io/docs/api/tray",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/tray.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/tray.md",
     "constructorMethod": {
       "signature": "(image)",
       "parameters": [
@@ -5735,29 +5729,15 @@
         ],
         "description": "The bounds of this tray icon as Object.",
         "returns": {
-          "type": "Object",
-          "properties": [
-            {
-              "name": "x",
-              "type": "Integer",
-              "description": ""
-            },
-            {
-              "name": "y",
-              "type": "Integer",
-              "description": ""
-            },
-            {
-              "name": "width",
-              "type": "Integer",
-              "description": ""
-            },
-            {
-              "name": "height",
-              "type": "Integer",
-              "description": ""
-            }
-          ]
+          "type": "Rectangle"
+        }
+      },
+      {
+        "name": "isDestroyed",
+        "signature": "()",
+        "returns": {
+          "type": "Boolean",
+          "description": "Whether the tray icon is destroyed."
         }
       }
     ],
@@ -5772,30 +5752,8 @@
           },
           {
             "name": "bounds",
-            "type": "Object",
-            "description": "- the bounds of tray icon.",
-            "properties": [
-              {
-                "name": "x",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "y",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "width",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "height",
-                "type": "Integer",
-                "description": ""
-              }
-            ]
+            "type": "Rectangle",
+            "description": "The bounds of tray icon"
           }
         ]
       },
@@ -5813,30 +5771,8 @@
           },
           {
             "name": "bounds",
-            "type": "Object",
-            "description": "the bounds of tray icon.",
-            "properties": [
-              {
-                "name": "x",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "y",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "width",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "height",
-                "type": "Integer",
-                "description": ""
-              }
-            ]
+            "type": "Rectangle",
+            "description": "The bounds of tray icon"
           }
         ]
       },
@@ -5854,30 +5790,8 @@
           },
           {
             "name": "bounds",
-            "type": "Object",
-            "description": "the bounds of tray icon",
-            "properties": [
-              {
-                "name": "x",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "y",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "width",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "height",
-                "type": "Integer",
-                "description": ""
-              }
-            ]
+            "type": "Rectangle",
+            "description": "The bounds of tray icon"
           }
         ]
       },
@@ -5978,7 +5892,7 @@
     "type": "Module",
     "slug": "web-contents",
     "websiteUrl": "http://electron.atom.io/docs/api/web-contents",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/web-contents.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/web-contents.md",
     "methods": [
       {
         "name": "getAllWebContents",
@@ -6022,7 +5936,7 @@
     "type": "Class",
     "slug": "web-contents",
     "websiteUrl": "http://electron.atom.io/docs/api/web-contents",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/web-contents.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/web-contents.md",
     "instanceName": "contents",
     "instanceMethods": [
       {
@@ -6065,7 +5979,7 @@
         "parameters": [
           {
             "name": "url",
-            "type": "URL"
+            "type": "String"
           }
         ]
       },
@@ -6457,27 +6371,27 @@
               {
                 "name": "forward",
                 "type": "Boolean",
-                "description": "Whether to search forward or backward, defaults to <code>true</code>."
+                "description": "Whether to search forward or backward, defaults to ."
               },
               {
                 "name": "findNext",
                 "type": "Boolean",
-                "description": "Whether the operation is first request or a follow up, defaults to <code>false</code>."
+                "description": "Whether the operation is first request or a follow up, defaults to ."
               },
               {
                 "name": "matchCase",
                 "type": "Boolean",
-                "description": "Whether search should be case-sensitive, defaults to <code>false</code>."
+                "description": "Whether search should be case-sensitive, defaults to ."
               },
               {
                 "name": "wordStart",
                 "type": "Boolean",
-                "description": "Whether to look only at the start of words. defaults to <code>false</code>."
+                "description": "Whether to look only at the start of words. defaults to ."
               },
               {
                 "name": "medialCapitalAsWordStart",
                 "type": "Boolean",
-                "description": "When combined with <code>wordStart</code>, accepts a match in the middle of a word if the match begins with an uppercase letter followed by a lowercase or non-letter. Accepts several other intra-word matches, defaults to <code>false</code>."
+                "description": "When combined with , accepts a match in the middle of a word if the match begins with an uppercase letter followed by a lowercase or non-letter. Accepts several other intra-word matches, defaults to ."
               }
             ]
           }
@@ -6516,30 +6430,8 @@
         "parameters": [
           {
             "name": "rect",
-            "type": "Object",
-            "description": "(optional) - The area of the page to be captured",
-            "properties": [
-              {
-                "name": "x",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "y",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "width",
-                "type": "Integer",
-                "description": ""
-              },
-              {
-                "name": "height",
-                "type": "Integer",
-                "description": ""
-              }
-            ]
+            "type": "Rectangle",
+            "description": "(optional) - The area of the page to be captured"
           },
           {
             "name": "callback",
@@ -6582,12 +6474,12 @@
               {
                 "name": "silent",
                 "type": "Boolean",
-                "description": "Don't ask user for print settings. Default is <code>false</code>."
+                "description": "Don't ask user for print settings. Default is ."
               },
               {
                 "name": "printBackground",
                 "type": "Boolean",
-                "description": "Also prints the background color and image of the web page. Default is <code>false</code>."
+                "description": "Also prints the background color and image of the web page. Default is ."
               }
             ]
           }
@@ -6610,7 +6502,7 @@
               {
                 "name": "pageSize",
                 "type": "String",
-                "description": "Specify page size of the generated PDF. Can be <code>A3</code>, <code>A4</code>, <code>A5</code>, <code>Legal</code>, <code>Letter</code>, <code>Tabloid</code> or an Object containing <code>height</code> and <code>width</code> in microns."
+                "description": "Specify page size of the generated PDF. Can be , , , , , or an Object containing and in microns."
               },
               {
                 "name": "printBackground",
@@ -6625,7 +6517,7 @@
               {
                 "name": "landscape",
                 "type": "Boolean",
-                "description": "<code>true</code> for landscape, <code>false</code> for portrait."
+                "description": "for landscape, for portrait."
               }
             ]
           },
@@ -6670,7 +6562,7 @@
               {
                 "name": "mode",
                 "type": "String",
-                "description": "Opens the devtools with specified dock state, can be <code>right</code>, <code>bottom</code>, <code>undocked</code>, <code>detach</code>. Defaults to last used dock state. In <code>undocked</code> mode it's possible to dock back. In <code>detach</code> mode it's not."
+                "description": "Opens the devtools with specified dock state, can be , , , . Defaults to last used dock state. In mode it's possible to dock back. In mode it's not."
               }
             ]
           }
@@ -6745,12 +6637,12 @@
               {
                 "name": "screenPosition",
                 "type": "String",
-                "description": "Specify the screen type to emulate (default: <code>desktop</code>) <ul> <li><code>desktop</code> String - Desktop screen type</li> <li><code>mobile</code> String - Mobile screen type</li> </ul>"
+                "description": "Specify the screen type to emulate (default: )"
               },
               {
                 "name": "screenSize",
                 "type": "Object",
-                "description": "Set the emulated screen size (screenPosition == mobile) <ul> <li><code>width</code> Integer - Set the emulated screen width</li> <li><code>height</code> Integer - Set the emulated screen height</li> </ul>",
+                "description": "Set the emulated screen size (screenPosition == mobile)",
                 "properties": [
                   {
                     "name": "width",
@@ -6767,7 +6659,7 @@
               {
                 "name": "viewPosition",
                 "type": "Object",
-                "description": "Position the view on the screen (screenPosition == mobile) (default: <code>{x: 0, y: 0}</code>) <ul> <li><code>x</code> Integer - Set the x axis offset from top left corner</li> <li><code>y</code> Integer - Set the y axis offset from top left corner</li> </ul>",
+                "description": "Position the view on the screen (screenPosition == mobile) (default: )",
                 "properties": [
                   {
                     "name": "x",
@@ -6784,12 +6676,12 @@
               {
                 "name": "deviceScaleFactor",
                 "type": "Integer",
-                "description": "Set the device scale factor (if zero defaults to original device scale factor) (default: <code>0</code>)"
+                "description": "Set the device scale factor (if zero defaults to original device scale factor) (default: )"
               },
               {
                 "name": "viewSize",
                 "type": "Object",
-                "description": "Set the emulated view size (empty means no override) <ul> <li><code>width</code> Integer - Set the emulated view width</li> <li><code>height</code> Integer - Set the emulated view height</li> </ul>",
+                "description": "Set the emulated view size (empty means no override)",
                 "properties": [
                   {
                     "name": "width",
@@ -6806,12 +6698,12 @@
               {
                 "name": "fitToView",
                 "type": "Boolean",
-                "description": "Whether emulated view should be scaled down if necessary to fit into available space (default: <code>false</code>)"
+                "description": "Whether emulated view should be scaled down if necessary to fit into available space (default: )"
               },
               {
                 "name": "offset",
                 "type": "Object",
-                "description": "Offset of the emulated view inside available space (not in fit to view mode) (default: <code>{x: 0, y: 0}</code>) <ul> <li><code>x</code> Float - Set the x axis offset from top left corner</li> <li><code>y</code> Float - Set the y axis offset from top left corner</li> </ul>",
+                "description": "Offset of the emulated view inside available space (not in fit to view mode) (default: )",
                 "properties": [
                   {
                     "name": "x",
@@ -6828,7 +6720,7 @@
               {
                 "name": "scale",
                 "type": "Float",
-                "description": "Scale of emulated view inside available space (not in fit to view mode) (default: <code>1</code>)"
+                "description": "Scale of emulated view inside available space (not in fit to view mode) (default: )"
               }
             ]
           }
@@ -6851,12 +6743,12 @@
               {
                 "name": "type",
                 "type": "String",
-                "description": "(<strong>required</strong>) - The type of the event, can be <code>mouseDown</code>, <code>mouseUp</code>, <code>mouseEnter</code>, <code>mouseLeave</code>, <code>contextMenu</code>, <code>mouseWheel</code>, <code>mouseMove</code>, <code>keyDown</code>, <code>keyUp</code>, <code>char</code>."
+                "description": "() - The type of the event, can be , , , , , , , , , ."
               },
               {
                 "name": "modifiers",
                 "type": "String[]",
-                "description": "An array of modifiers of the event, can include <code>shift</code>, <code>control</code>, <code>alt</code>, <code>meta</code>, <code>isKeypad</code>, <code>isAutoRepeat</code>, <code>leftButtonDown</code>, <code>middleButtonDown</code>, <code>rightButtonDown</code>, <code>capsLock</code>, <code>numLock</code>, <code>left</code>, <code>right</code>."
+                "description": "An array of modifiers of the event, can include , , , , , , , , , , , , ."
               }
             ]
           }
@@ -7315,44 +7207,7 @@
           },
           {
             "name": "certificate",
-            "type": "Object",
-            "properties": [
-              {
-                "name": "data",
-                "type": "String",
-                "description": "PEM encoded data"
-              },
-              {
-                "name": "issuerName",
-                "type": "String",
-                "description": "Issuer's Common Name"
-              },
-              {
-                "name": "subjectName",
-                "type": "String",
-                "description": "Subject's Common Name"
-              },
-              {
-                "name": "serialNumber",
-                "type": "String",
-                "description": "Hex value represented string"
-              },
-              {
-                "name": "validStart",
-                "type": "Integer",
-                "description": "Start date of the certificate being valid in seconds"
-              },
-              {
-                "name": "validExpiry",
-                "type": "Integer",
-                "description": "End date of the certificate being valid in seconds"
-              },
-              {
-                "name": "fingerprint",
-                "type": "String",
-                "description": "Fingerprint of the certificate"
-              }
-            ]
+            "type": "Certificate"
           },
           {
             "name": "callback",
@@ -7374,7 +7229,7 @@
           },
           {
             "name": "certificateList",
-            "type": "[Objects]"
+            "type": "Certificate[]"
           },
           {
             "name": "callback",
@@ -7619,7 +7474,7 @@
               {
                 "name": "mediaType",
                 "type": "String",
-                "description": "Type of the node the context menu was invoked on. Can be <code>none</code>, <code>image</code>, <code>audio</code>, <code>video</code>, <code>canvas</code>, <code>file</code> or <code>plugin</code>."
+                "description": "Type of the node the context menu was invoked on. Can be , , , , , or ."
               },
               {
                 "name": "hasImageContents",
@@ -7654,12 +7509,12 @@
               {
                 "name": "inputFieldType",
                 "type": "String",
-                "description": "If the context menu was invoked on an input field, the type of that field. Possible values are <code>none</code>, <code>plainText</code>, <code>password</code>, <code>other</code>."
+                "description": "If the context menu was invoked on an input field, the type of that field. Possible values are , , , ."
               },
               {
                 "name": "menuSourceType",
                 "type": "String",
-                "description": "Input source that invoked the context menu. Can be <code>none</code>, <code>mouse</code>, <code>keyboard</code>, <code>touch</code>, <code>touchMenu</code>."
+                "description": "Input source that invoked the context menu. Can be , , , , ."
               },
               {
                 "name": "mediaFlags",
@@ -7705,29 +7560,7 @@
           },
           {
             "name": "dirtyRect",
-            "type": "Object",
-            "properties": [
-              {
-                "name": "x",
-                "type": "Integer",
-                "description": "The x coordinate on the image."
-              },
-              {
-                "name": "y",
-                "type": "Integer",
-                "description": "The y coordinate on the image."
-              },
-              {
-                "name": "width",
-                "type": "Integer",
-                "description": "The width of the dirty area."
-              },
-              {
-                "name": "height",
-                "type": "Integer",
-                "description": "The height of the dirty area."
-              }
-            ]
+            "type": "Rectangle"
           },
           {
             "name": "image",
@@ -7748,7 +7581,7 @@
     "type": "Class",
     "slug": "debugger",
     "websiteUrl": "http://electron.atom.io/docs/api/debugger",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/debugger.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/debugger.md",
     "instanceName": "debugger",
     "instanceMethods": [
       {
@@ -7847,7 +7680,7 @@
     "type": "Module",
     "slug": "process",
     "websiteUrl": "http://electron.atom.io/docs/api/process",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/process.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/process.md",
     "methods": [
       {
         "name": "crash",
@@ -7924,12 +7757,12 @@
             {
               "name": "swapTotal",
               "type": "Integer",
-              "description": "The total amount of swap memory in Kilobytes available to the system. <em>Windows</em> <em>Linux</em>"
+              "description": "The total amount of swap memory in Kilobytes available to the system."
             },
             {
               "name": "swapFree",
               "type": "Integer",
-              "description": "The free amount of swap memory in Kilobytes available to the system. <em>Windows</em> <em>Linux</em>"
+              "description": "The free amount of swap memory in Kilobytes available to the system."
             }
           ]
         }
@@ -7952,7 +7785,7 @@
     "type": "Module",
     "slug": "desktop-capturer",
     "websiteUrl": "http://electron.atom.io/docs/api/desktop-capturer",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/desktop-capturer.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/desktop-capturer.md",
     "methods": [
       {
         "name": "getSources",
@@ -7966,12 +7799,12 @@
               {
                 "name": "types",
                 "type": "String[]",
-                "description": "An array of Strings that lists the types of desktop sources to be captured, available types are <code>screen</code> and <code>window</code>."
+                "description": "An array of Strings that lists the types of desktop sources to be captured, available types are and ."
               },
               {
                 "name": "thumbnailSize",
                 "type": "Object",
-                "description": "(optional) - The suggested size that the media source thumbnail should be scaled to, defaults to <code>{width: 150, height: 150}</code>.",
+                "description": "(optional) - The suggested size that the media source thumbnail should be scaled to, defaults to .",
                 "properties": []
               }
             ]
@@ -7994,7 +7827,7 @@
     "type": "Module",
     "slug": "ipc-renderer",
     "websiteUrl": "http://electron.atom.io/docs/api/ipc-renderer",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/ipc-renderer.md"
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/ipc-renderer.md"
   },
   {
     "name": "remote",
@@ -8006,7 +7839,7 @@
     "type": "Module",
     "slug": "remote",
     "websiteUrl": "http://electron.atom.io/docs/api/remote",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/remote.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/remote.md",
     "methods": [
       {
         "name": "require",
@@ -8071,7 +7904,7 @@
     "type": "Module",
     "slug": "web-frame",
     "websiteUrl": "http://electron.atom.io/docs/api/web-frame",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/web-frame.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/web-frame.md",
     "methods": [
       {
         "name": "setZoomFactor",
@@ -8216,188 +8049,28 @@
           "properties": [
             {
               "name": "images",
-              "type": "Object",
-              "description": "<ul> <li><code>count</code> Integer</li> <li><code>size</code> Integer</li> <li><code>liveSize</code> Integer</li> <li><code>decodedSize</code> Integer</li> <li><code>purgedSize</code> Integer</li> <li><code>purgeableSize</code> Integer</li> </ul>",
-              "properties": [
-                {
-                  "name": "count",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "size",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "liveSize",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "decodedSize",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "purgedSize",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "purgeableSize",
-                  "type": "Integer",
-                  "description": ""
-                }
-              ]
+              "type": "MemoryUsageDetails",
+              "description": ""
             },
             {
               "name": "cssStyleSheets",
-              "type": "Object",
-              "description": "<ul> <li><code>count</code> Integer</li> <li><code>size</code> Integer</li> <li><code>liveSize</code> Integer</li> <li><code>decodedSize</code> Integer</li> <li><code>purgedSize</code> Integer</li> <li><code>purgeableSize</code> Integer</li> </ul>",
-              "properties": [
-                {
-                  "name": "count",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "size",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "liveSize",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "decodedSize",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "purgedSize",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "purgeableSize",
-                  "type": "Integer",
-                  "description": ""
-                }
-              ]
+              "type": "MemoryUsageDetails",
+              "description": ""
             },
             {
               "name": "xslStyleSheets",
-              "type": "Object",
-              "description": "<ul> <li><code>count</code> Integer</li> <li><code>size</code> Integer</li> <li><code>liveSize</code> Integer</li> <li><code>decodedSize</code> Integer</li> <li><code>purgedSize</code> Integer</li> <li><code>purgeableSize</code> Integer</li> </ul>",
-              "properties": [
-                {
-                  "name": "count",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "size",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "liveSize",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "decodedSize",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "purgedSize",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "purgeableSize",
-                  "type": "Integer",
-                  "description": ""
-                }
-              ]
+              "type": "MemoryUsageDetails",
+              "description": ""
             },
             {
               "name": "fonts",
-              "type": "Object",
-              "description": "<ul> <li><code>count</code> Integer</li> <li><code>size</code> Integer</li> <li><code>liveSize</code> Integer</li> <li><code>decodedSize</code> Integer</li> <li><code>purgedSize</code> Integer</li> <li><code>purgeableSize</code> Integer</li> </ul>",
-              "properties": [
-                {
-                  "name": "count",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "size",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "liveSize",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "decodedSize",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "purgedSize",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "purgeableSize",
-                  "type": "Integer",
-                  "description": ""
-                }
-              ]
+              "type": "MemoryUsageDetails",
+              "description": ""
             },
             {
               "name": "other",
-              "type": "Object",
-              "description": "<ul> <li><code>count</code> Integer</li> <li><code>size</code> Integer</li> <li><code>liveSize</code> Integer</li> <li><code>decodedSize</code> Integer</li> <li><code>purgedSize</code> Integer</li> <li><code>purgeableSize</code> Integer</li> </ul>",
-              "properties": [
-                {
-                  "name": "count",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "size",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "liveSize",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "decodedSize",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "purgedSize",
-                  "type": "Integer",
-                  "description": ""
-                },
-                {
-                  "name": "purgeableSize",
-                  "type": "Integer",
-                  "description": ""
-                }
-              ]
+              "type": "MemoryUsageDetails",
+              "description": ""
             }
           ]
         }
@@ -8419,7 +8092,7 @@
     "type": "Class",
     "slug": "browser-window-proxy",
     "websiteUrl": "http://electron.atom.io/docs/api/browser-window-proxy",
-    "repoUrl": "https://github.com/electron/electron/blob/v1.4.3/docs/api/browser-window-proxy.md",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/browser-window-proxy.md",
     "instanceName": "win",
     "instanceMethods": [
       {
@@ -8473,6 +8146,412 @@
       {
         "name": "closed",
         "description": "A Boolean that is set to true after the child window gets closed."
+      }
+    ]
+  },
+  {
+    "name": "Certificate",
+    "process": {
+      "main": true,
+      "renderer": true
+    },
+    "type": "Structure",
+    "slug": "certificate",
+    "websiteUrl": "http://electron.atom.io/docs/api/structures/certificate",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/structures/certificate.md",
+    "properties": [
+      {
+        "name": "data",
+        "type": "String",
+        "description": "PEM encoded data"
+      },
+      {
+        "name": "issuerName",
+        "type": "String",
+        "description": "Issuer's Common Name"
+      },
+      {
+        "name": "subjectName",
+        "type": "String",
+        "description": "Subject's Common Name"
+      },
+      {
+        "name": "serialNumber",
+        "type": "String",
+        "description": "Hex value represented string"
+      },
+      {
+        "name": "validStart",
+        "type": "Number",
+        "description": "Start date of the certificate being valid in seconds"
+      },
+      {
+        "name": "validExpiry",
+        "type": "Number",
+        "description": "End date of the certificate being valid in seconds"
+      },
+      {
+        "name": "fingerprint",
+        "type": "String",
+        "description": "Fingerprint of the certificate"
+      }
+    ]
+  },
+  {
+    "name": "Display",
+    "process": {
+      "main": true,
+      "renderer": true
+    },
+    "type": "Structure",
+    "slug": "display",
+    "websiteUrl": "http://electron.atom.io/docs/api/structures/display",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/structures/display.md",
+    "properties": [
+      {
+        "name": "id",
+        "type": "Number",
+        "description": "Unique identifier associated with the display."
+      },
+      {
+        "name": "rotation",
+        "type": "Number",
+        "description": "Can be 0, 90, 180, 270, represents screen rotation in clock-wise degrees."
+      },
+      {
+        "name": "scaleFactor",
+        "type": "Number",
+        "description": "Output device's pixel scale factor."
+      },
+      {
+        "name": "touchSupport",
+        "type": "String",
+        "description": "Can be , , ."
+      },
+      {
+        "name": "bounds",
+        "type": "Rectangle",
+        "description": ""
+      },
+      {
+        "name": "size",
+        "type": "Object",
+        "description": "",
+        "properties": [
+          {
+            "name": "height",
+            "type": "Number",
+            "description": ""
+          },
+          {
+            "name": "width",
+            "type": "Number",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "name": "workArea",
+        "type": "Rectangle",
+        "description": ""
+      },
+      {
+        "name": "workAreaSize",
+        "type": "Object",
+        "description": "",
+        "properties": [
+          {
+            "name": "height",
+            "type": "Number",
+            "description": ""
+          },
+          {
+            "name": "width",
+            "type": "Number",
+            "description": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "JumpListCategory",
+    "process": {
+      "main": true,
+      "renderer": true
+    },
+    "type": "Structure",
+    "slug": "jump-list-category",
+    "websiteUrl": "http://electron.atom.io/docs/api/structures/jump-list-category",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/structures/jump-list-category.md",
+    "properties": [
+      {
+        "name": "type",
+        "type": "String",
+        "description": "One of the following:"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "description": "Must be set if is , otherwise it should be omitted."
+      },
+      {
+        "name": "items",
+        "type": "JumpListItem[]",
+        "description": "Array of objects if is or , otherwise it should be omitted."
+      }
+    ]
+  },
+  {
+    "name": "JumpListItem",
+    "process": {
+      "main": true,
+      "renderer": true
+    },
+    "type": "Structure",
+    "slug": "jump-list-item",
+    "websiteUrl": "http://electron.atom.io/docs/api/structures/jump-list-item",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/structures/jump-list-item.md",
+    "properties": [
+      {
+        "name": "type",
+        "type": "String",
+        "description": "One of the following:"
+      },
+      {
+        "name": "path",
+        "type": "String",
+        "description": "Path of the file to open, should only be set if is ."
+      },
+      {
+        "name": "program",
+        "type": "String",
+        "description": "Path of the program to execute, usually you should specify which opens the current program. Should only be set if is ."
+      },
+      {
+        "name": "args",
+        "type": "String",
+        "description": "The command line arguments when is executed. Should only be set if is ."
+      },
+      {
+        "name": "title",
+        "type": "String",
+        "description": "The text to be displayed for the item in the Jump List. Should only be set if is ."
+      },
+      {
+        "name": "description",
+        "type": "String",
+        "description": "Description of the task (displayed in a tooltip). Should only be set if is ."
+      },
+      {
+        "name": "iconPath",
+        "type": "String",
+        "description": "The absolute path to an icon to be displayed in a Jump List, which can be an arbitrary resource file that contains an icon (e.g. , , ). You can usually specify to show the program icon."
+      },
+      {
+        "name": "iconIndex",
+        "type": "Number",
+        "description": "The index of the icon in the resource file. If a resource file contains multiple icons this value can be used to specify the zero-based index of the icon that should be displayed for this task. If a resource file contains only one icon, this property should be set to zero."
+      }
+    ]
+  },
+  {
+    "name": "MemoryUsageDetails",
+    "process": {
+      "main": true,
+      "renderer": true
+    },
+    "type": "Structure",
+    "slug": "memory-usage-details",
+    "websiteUrl": "http://electron.atom.io/docs/api/structures/memory-usage-details",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/structures/memory-usage-details.md",
+    "properties": [
+      {
+        "name": "count",
+        "type": "Number",
+        "description": ""
+      },
+      {
+        "name": "size",
+        "type": "Number",
+        "description": ""
+      },
+      {
+        "name": "liveSize",
+        "type": "Number",
+        "description": ""
+      },
+      {
+        "name": "decodedSize",
+        "type": "Number",
+        "description": ""
+      },
+      {
+        "name": "purgedSize",
+        "type": "Number",
+        "description": ""
+      },
+      {
+        "name": "purgeableSize",
+        "type": "Number",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "Rectangle",
+    "process": {
+      "main": true,
+      "renderer": true
+    },
+    "type": "Structure",
+    "slug": "rectangle",
+    "websiteUrl": "http://electron.atom.io/docs/api/structures/rectangle",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/structures/rectangle.md",
+    "properties": [
+      {
+        "name": "x",
+        "type": "Number",
+        "description": "The x coordinate of the origin of the rectangle"
+      },
+      {
+        "name": "y",
+        "type": "Number",
+        "description": "The y coordinate of the origin of the rectangle"
+      },
+      {
+        "name": "width",
+        "type": "Number",
+        "description": ""
+      },
+      {
+        "name": "height",
+        "type": "Number",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "ShortcutDetails",
+    "process": {
+      "main": true,
+      "renderer": true
+    },
+    "type": "Structure",
+    "slug": "shortcut-details",
+    "websiteUrl": "http://electron.atom.io/docs/api/structures/shortcut-details",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/structures/shortcut-details.md",
+    "properties": [
+      {
+        "name": "target",
+        "type": "String",
+        "description": "The target to launch from this shortcut."
+      },
+      {
+        "name": "cwd",
+        "type": "String",
+        "description": "(optional) - The working directory. Default is empty."
+      },
+      {
+        "name": "args",
+        "type": "String",
+        "description": "(optional) - The arguments to be applied to when launching from this shortcut. Default is empty."
+      },
+      {
+        "name": "description",
+        "type": "String",
+        "description": "(optional) - The description of the shortcut. Default is empty."
+      },
+      {
+        "name": "icon",
+        "type": "String",
+        "description": "(optional) - The path to the icon, can be a DLL or EXE. and have to be set together. Default is empty, which uses the target's icon."
+      },
+      {
+        "name": "iconIndex",
+        "type": "Number",
+        "description": "(optional) - The resource ID of icon when is a DLL or EXE. Default is 0."
+      },
+      {
+        "name": "appUserModelId",
+        "type": "String",
+        "description": "(optional) - The Application User Model ID. Default is empty."
+      }
+    ]
+  },
+  {
+    "name": "Task",
+    "process": {
+      "main": true,
+      "renderer": true
+    },
+    "type": "Structure",
+    "slug": "task",
+    "websiteUrl": "http://electron.atom.io/docs/api/structures/task",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/structures/task.md",
+    "properties": [
+      {
+        "name": "program",
+        "type": "String",
+        "description": "Path of the program to execute, usually you should specify which opens the current program."
+      },
+      {
+        "name": "arguments",
+        "type": "String",
+        "description": "The command line arguments when is executed."
+      },
+      {
+        "name": "title",
+        "type": "String",
+        "description": "The string to be displayed in a JumpList."
+      },
+      {
+        "name": "description",
+        "type": "String",
+        "description": "Description of this task."
+      },
+      {
+        "name": "iconPath",
+        "type": "String",
+        "description": "The absolute path to an icon to be displayed in a JumpList, which can be an arbitrary resource file that contains an icon. You can usually specify to show the icon of the program."
+      },
+      {
+        "name": "iconIndex",
+        "type": "Number",
+        "description": "The icon index in the icon file. If an icon file consists of two or more icons, set this value to identify the icon. If an icon file consists of one icon, this value is 0."
+      }
+    ]
+  },
+  {
+    "name": "ThumbarButton",
+    "process": {
+      "main": true,
+      "renderer": true
+    },
+    "type": "Structure",
+    "slug": "thumbar-button",
+    "websiteUrl": "http://electron.atom.io/docs/api/structures/thumbar-button",
+    "repoUrl": "https://github.com/electron/electron/blob/v1.4.4/docs/api/structures/thumbar-button.md",
+    "properties": [
+      {
+        "name": "icon",
+        "type": "NativeImage",
+        "description": "The icon showing in thumbnail toolbar."
+      },
+      {
+        "name": "click",
+        "type": "Function",
+        "description": ""
+      },
+      {
+        "name": "tooltip",
+        "type": "String",
+        "description": "(optional) - The text of the button's tooltip."
+      },
+      {
+        "name": "flags",
+        "type": "String[]",
+        "description": "(optional) - Control specific states and behaviors of the button. By default, it is ."
       }
     ]
   }
