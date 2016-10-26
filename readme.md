@@ -20,6 +20,46 @@ docs from Electron v1.4.1.
 
 ## Usage
 
+This module exports structured API data in a few different formats. Choose
+the one that works best for your use case:
+
+### Object Tree Structure
+
+To access the docs as a big object tree:
+
+```js
+const apis = require('electron-api-docs/tree')
+```
+
+This gives you an object with keys for easy traversal:
+
+```js
+apis.BrowserWindow.instanceMethods.setAspectRatio
+```
+
+### Array Structure
+
+To access the docs as an array of API objects:
+
+```js
+const apis = require('electron-api-docs/electron-api.json')
+```
+
+This gives you an array of API objects, so functional methods like `find`,
+`map`, `filter`, and `every` can be used:
+
+```js
+apis.find(api => api.name === 'BrowserWindow')
+apis.filter(api => api.type === 'Class')
+apis.filter(api => api.type === 'Module')
+apis.map(api => api.name)
+```
+
+### Keyed Array Structure
+
+For the best of both worlds (arrays and objects), you can require the module
+as a [keyed array](https://github.com/zeke/keyed-array):
+
 ```js
 const apis = require('electron-api-docs')
 ```
@@ -45,11 +85,8 @@ functional methods like `find`, `map`, `filter`, and `every` can be used:
 
 ```js
 apis.find(api => api.name === 'BrowserWindow')
-
 apis.filter(api => api.type === 'Class')
-
 apis.filter(api => api.type === 'Module')
-
 apis.map(api => api.name)
 
 // All arrays have named keys, not just the top-level array!
