@@ -25,6 +25,7 @@
     "gh-latest-release": "^1.0.0",
     "json": "^9.0.4",
     "nugget": "^2.0.1",
+    "objectify-array": "^1.0.0",
     "pify": "^2.3.0",
     "standard": "^8.1.0",
     "standard-markdown": "^1.2.1",
