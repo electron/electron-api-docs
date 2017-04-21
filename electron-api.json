@@ -6405,7 +6405,7 @@
     ]
   },
   {
-    "name": "nativeImage",
+    "name": "NativeImage",
     "description": "Create tray, dock, and application icons using PNG or JPG files.",
     "process": {
       "main": true,
