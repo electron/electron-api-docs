@@ -16933,7 +16933,7 @@
             "type": "Boolean",
             "collection": false,
             "description": "Default `false`.",
-            "required": true
+            "required": false
           },
           {
             "name": "callback",
