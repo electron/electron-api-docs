@@ -1,6 +1,6 @@
 {
   "name": "electron-api-docs",
-  "version": "1.6.11",
+  "version": "1.6.15",
   "description": "Electron's API documentation in a structured JSON format",
   "main": "index.js",
   "scripts": {
