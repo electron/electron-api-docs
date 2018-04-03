@@ -1,3 +1,5 @@
+# :construction: THIS PROJECT IS NO LONGER MAINTAINED. To get the latest version of Electron's structured docs, see the `electron-api.json` artifact in any Electron releaase: https://github.com/electron/electron/releases
+
 # electron-api-docs [![Build Status](https://travis-ci.org/electron/electron-api-docs.svg?branch=master)](https://travis-ci.org/electron/electron-api-docs)
 
 Electron's API documentation in a structured JSON format.
